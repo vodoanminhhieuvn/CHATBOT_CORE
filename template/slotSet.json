@@ -1,0 +1,13 @@
+{
+  "className": "Example",
+  "returnClassName": "action_example",
+  "slotSet": [{
+      "slot": "name",
+      "slotValue": 2
+    },
+    {
+      "slot": "subName",
+      "slotValue": "'Sub'"
+    }
+  ]
+}

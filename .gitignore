@@ -1,0 +1,9 @@
+/.vscode
+/.chatbot_lib
+/rasa_en_core/.rasa
+/rasa_vn_core/.rasa
+/rasa_en_core/models
+/rasa_vn_core/models
+/rasa_en_core/out.log
+/rasa_vn_core/out.log
+.DS_Store
