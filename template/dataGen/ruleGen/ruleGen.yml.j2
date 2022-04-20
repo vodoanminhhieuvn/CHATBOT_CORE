@@ -1,0 +1,10 @@
+version: "3.0"
+
+rules:
+
+{% for rule in rules %}
+- rule: {{rule['name']}}
+  steps: 
+  - intent: {{rule['intent']}}
+  - action: {{rule['action']}}
+{% endfor %}
