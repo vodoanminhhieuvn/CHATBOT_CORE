@@ -1,8 +1,16 @@
 {
-  "entities": [
-    "name",
-    "age",
-    "gender"
+  "entities": [{
+      "name": "name",
+      "type": "text"
+    },
+    {
+      "name": "age",
+      "type": "float"
+    },
+    {
+      "name": "gender",
+      "type": "bool"
+    }
   ],
   "intents": [
     "greet",

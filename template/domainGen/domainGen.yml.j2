@@ -7,13 +7,22 @@ intents:
 
 entities:
   {% for entity in entities %}
-  - {{entity}}
+  - {{entity['name']}}
   {% endfor %}
 
 actions:
-  {% for in action in actions %}
+  {% for action in actions %}
   - {{action}}
   {% enfor %}
+
+slots:
+  {% for entity in entities %}
+    {{entity['name']}}:
+      type: {{entity['type']}}
+      mappings:
+      - type: from_entity
+        entity: {{entity['name']}}
+  {% endfor %}
 
 responses:
   utter_greet:
