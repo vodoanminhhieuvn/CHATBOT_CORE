@@ -1,0 +1,17 @@
+{
+  "entities": [
+    "name",
+    "age",
+    "gender"
+  ],
+  "intents": [
+    "greet",
+    "goodbye",
+    "confirm",
+    "challenge"
+  ],
+  "actions": [
+    "utter_response",
+    "action_response"
+  ]
+}
