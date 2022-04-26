@@ -14,7 +14,7 @@ class Action{{className}}(Action):
                   domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         {% for slot in slotSet %}
-        SlotSet('{{slot['slot']}}', {{slot['slotValue']}})
+        SlotSet('{{slot['name']}}', {{slot['value']}})
         {% endfor %}
 
         dispatcher.utter_message(text="Hello World!")
