@@ -1,9 +1,23 @@
 /.vscode
+
 /.chatbot_lib
+
+// Ignore rasa auto generate codes
+
 /rasa_en_core/.rasa
 /rasa_vn_core/.rasa
+/rasa_example_core/.rasa
+
+// Ignore training models
+
 /rasa_en_core/models
 /rasa_vn_core/models
+/rasa_example_core/models
+
+// Ignore those output from restful API call
+
 /rasa_en_core/out.log
 /rasa_vn_core/out.log
+/rasa_example_core/out.log
+
 .DS_Store
