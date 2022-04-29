@@ -1,0 +1,23 @@
+{
+  [{
+    'value': None,
+    'confidence': 0.5,
+    'entity': 'sentiment',
+    'extractor': 'sentiment_extractor'
+  }, {
+    'entity': 'defination',
+    'start': 0,
+    'end': 5,
+    'value': 'classes',
+    'extractor': 'RegexEntityExtractor',
+    'processors': ['EntitySynonymMapper']
+  }, {
+    'entity': 'defination',
+    'start': 0,
+    'end': 5,
+    'confidence_entity': 0.9997668862342834,
+    'value': 'classes',
+    'extractor': 'DIETClassifier',
+    'processors': ['EntitySynonymMapper']
+  }]
+}

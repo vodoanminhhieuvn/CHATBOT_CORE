@@ -1,0 +1,16 @@
+version: '3.1'
+
+nlu:
+  - intent: ask_for_defination
+    examples: |
+      - [class](defination) là gì
+      - [abstract](defination) là gì
+      - đỉnh nghĩa [lớp](defination) 
+      - đỉnh nghĩa [abstract](defination)
+      - lý thuyết [lớp](defination)
+      - khái niệm [lop](defination)
+      - cho mình [class](defination) là gì
+      - cho minhf bik [class](defination) laf gif
+      - lý thuyết [_oov_](defination)
+      - khái niệm _oov_
+      - định nghĩa _oov_

@@ -41,7 +41,7 @@ class ViSentiment(GraphComponent):
         entity = {"value": value,
                   "confidence": confidence,
                   "entity": "sentiment",
-                  "extractor": "sentiment_extractor"}
+                  "extractor": "SentimentExtractor"}
 
         return entity
 

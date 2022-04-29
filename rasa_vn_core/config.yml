@@ -13,9 +13,19 @@ pipeline:
   - name: LexicalSyntacticFeaturizer
   - name: CountVectorsFeaturizer
   - name: CountVectorsFeaturizer
+    analyzer: word
+    min_ngram: 1
+    max_ngram: 1
+    OOV_token: _oov_
+    use_shared_vocab: False
+  - name: CountVectorsFeaturizer
     analyzer: char_wb
     min_ngram: 1
     max_ngram: 4
+  - name: CountVectorsFeaturizer
+    analyzer: char
+    min_ngram: 3
+    max_ngram: 5
   - name: RegexEntityExtractor
     case_sensitive: False
     use_lookup_tables: True
@@ -27,6 +37,7 @@ pipeline:
   - name: EntitySynonymMapper
   - name: FallbackClassifier
     threshold: 0.7
+    ambiguity_threshold: 0.1
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
