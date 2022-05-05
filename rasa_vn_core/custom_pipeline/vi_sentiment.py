@@ -47,10 +47,9 @@ class ViSentiment(GraphComponent):
 
     def process(self, messages: List[Message], **kwargs) -> List[Message]:
 
-        for message in messages:
-            print(message.get(TEXT))
-            key, confidence = sentiment(message.get(TEXT)), 0.5
+        for user_message in messages:
+            key, confidence = sentiment(user_message.get(TEXT)), 0.5
             entity = self.convert_to_rasa(key, confidence)
-            message.set("entities", [entity], add_to_output=True)
+            user_message.set("entities", [entity], add_to_output=True)
 
         return messages

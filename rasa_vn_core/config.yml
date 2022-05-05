@@ -12,12 +12,8 @@ pipeline:
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
   - name: CountVectorsFeaturizer
-  - name: CountVectorsFeaturizer
-    analyzer: word
-    min_ngram: 1
-    max_ngram: 1
     OOV_token: _oov_
-    use_shared_vocab: False
+    token_pattern: (?u)\b\w+\b
   - name: CountVectorsFeaturizer
     analyzer: char_wb
     min_ngram: 1

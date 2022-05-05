@@ -1,50 +1,55 @@
 version: '3.1'
-
 intents:
-  - greet
-  - goodbye
   - affirm
+  - ask_for_defination
+  - bot_challenge
   - deny
+  - goodbye
+  - greet
   - mood_great
   - mood_unhappy
-  - bot_challenge
   - out_of_scope
-  - ask_for_defination
-
+  - request_feedback
 actions:
-  - action_defination
   - action_default_fallback
-
+  - action_defination
+  - action_submit_feedback
 entities:
+  - sentiment
   - defination
-
 slots:
   defination:
     type: text
     mappings:
       - type: from_entity
         entity: defination
-
+  feedback:
+    type: text
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: feedback_form
+            requested_slot: feedback
+forms:
+  feedback_form:
+    required_slots:
+      - feedback
 responses:
   utter_greet:
-    - text: 'Hey! How are you?'
-
+    - text: Hey! How are you?
   utter_cheer_up:
     - text: 'Here is something to cheer you up:'
-      image: 'https://i.imgur.com/nGF1K8f.jpg'
-
+      image: https://i.imgur.com/nGF1K8f.jpg
   utter_did_that_help:
-    - text: 'Did that help you?'
-
+    - text: Did that help you?
   utter_happy:
-    - text: 'Great, carry on!'
-
+    - text: Great, carry on!
+  utter_ask_feedback:
+    - text: Please free to give us feedbacks :)
   utter_goodbye:
-    - text: 'Bye'
-
+    - text: Bye
   utter_iamabot:
-    - text: 'I am a bot, powered by Rasa.'
-
+    - text: I am a bot, powered by Rasa.
 session_config:
   session_expiration_time: 0
   carry_over_slots_to_new_session: true

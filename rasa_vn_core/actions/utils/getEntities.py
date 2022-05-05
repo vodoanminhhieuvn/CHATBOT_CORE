@@ -1,7 +1,6 @@
 from typing import Any, Dict, Text
-from rasa_sdk import Tracker
 
-import json
+from rasa_sdk import Tracker
 
 
 class ExtractorType:
@@ -10,6 +9,10 @@ class ExtractorType:
     SentimentExtractor: str = 'SentimentExtractor'
 
 
-def get_entities(tracker: Tracker, entity, extractor: str = ExtractorType.DIETClassifier) -> Dict[Text, Any]:
+def get_entities(
+        tracker: Tracker, entity,
+        extractor: str = ExtractorType.DIETClassifier) -> Dict[Text, Any]:
     blobs = tracker.latest_message['entities']
-    return [blob['value'] for blob in blobs if blob['entity'] == entity and blob['extractor'] == extractor]
+    return [blob['value']
+            for blob in blobs
+            if blob['entity'] == entity and blob['extractor'] == extractor]

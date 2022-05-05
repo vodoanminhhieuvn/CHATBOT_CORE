@@ -6,3 +6,4 @@ nlu:
       - class
       - abstract
       - oop
+      - object

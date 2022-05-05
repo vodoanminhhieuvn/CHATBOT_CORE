@@ -1,9 +1,13 @@
 {
-  [{
+  'intent': {
+    'name': 'ask_for_defination',
+    'confidence': 0.9999687671661377
+  },
+  'entities': [{
     'value': None,
     'confidence': 0.5,
     'entity': 'sentiment',
-    'extractor': 'sentiment_extractor'
+    'extractor': 'SentimentExtractor'
   }, {
     'entity': 'defination',
     'start': 0,
@@ -15,9 +19,33 @@
     'entity': 'defination',
     'start': 0,
     'end': 5,
-    'confidence_entity': 0.9997668862342834,
+    'confidence_entity': 0.9998791217803955,
     'value': 'classes',
     'extractor': 'DIETClassifier',
     'processors': ['EntitySynonymMapper']
+  }],
+  'text': 'class là gì',
+  'message_id': '7b0f148bcb4841e88c1e22e92a6f9710',
+  'metadata': {},
+  'text_tokens': [
+    [0, 5],
+    [6, 8],
+    [9, 11]
+  ],
+  'intent_ranking': [{
+    'name': 'ask_for_defination',
+    'confidence': 0.9999687671661377
+  }, {
+    'name': 'affirm',
+    'confidence': 9.202926776197273e-06
+  }, {
+    'name': 'deny',
+    'confidence': 8.177193194569554e-06
+  }, {
+    'name': 'bot_challenge',
+    'confidence': 6.876712632220006e-06
+  }, {
+    'name': 'greet',
+    'confidence': 5.7905790527001955e-06
   }]
 }

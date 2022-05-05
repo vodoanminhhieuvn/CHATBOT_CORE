@@ -12,5 +12,9 @@ nlu:
       - cho mình [class](defination) là gì
       - cho minhf bik [class](defination) laf gif
       - lý thuyết [_oov_](defination)
-      - khái niệm _oov_
-      - định nghĩa _oov_
+      - lý thuyết [class](defination)
+      - lý thuyết [abstract](defination)
+      - lý thuyết [object](defination)
+      - lý thuyết [oop](defination)
+      - khái niệm [_oov_](defination)
+      - định nghĩa [_oov_](defination)
