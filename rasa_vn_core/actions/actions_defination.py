@@ -4,7 +4,7 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
 from actions.data.definations import get_defination_data, valid_defination
-from actions.utils.getEntities import ExtractorType, get_entities
+from actions.utils.get_entities import get_entities
 
 
 class ActionDefination(Action):
@@ -20,8 +20,7 @@ class ActionDefination(Action):
             tracker=tracker, entity='defination')
 
         for defination in list_defination_entities:
-            if (valid_defination(defination)):
-
+            if valid_defination(defination):
                 for text in get_defination_data(defination):
                     dispatcher.utter_message(text)
 

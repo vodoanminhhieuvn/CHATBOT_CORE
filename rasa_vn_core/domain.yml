@@ -45,7 +45,7 @@ responses:
   utter_happy:
     - text: Great, carry on!
   utter_ask_feedback:
-    - text: Please free to give us feedbacks :)
+    - text: Tin nhắn tiếp theo của bạn là lời đóng góp ý kiến của ban nha :)
   utter_goodbye:
     - text: Bye
   utter_iamabot:

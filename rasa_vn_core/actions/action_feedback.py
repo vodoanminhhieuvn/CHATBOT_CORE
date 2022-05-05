@@ -8,7 +8,8 @@ from requests import Response
 
 from actions.request.http_url import FEEDBACK_URL
 from actions.request.request import request_json_api
-from actions.utils.getEntities import ExtractorType, get_entities
+from actions.utils.get_entities import ExtractorType, get_entities
+from actions.utils.get_lastest_message import get_lastest_message
 
 
 class ActionSubmitFeedback(Action):
@@ -27,7 +28,7 @@ class ActionSubmitFeedback(Action):
 
         response: Response = await request_json_api(
             url=FEEDBACK_URL,
-            json={"text": tracker.latest_message['text'],
+            json={"text": get_lastest_message(tracker=tracker),
                   "sentiment": f"{sentiment_entity[0]}"})
 
         if response.status_code == 201:
