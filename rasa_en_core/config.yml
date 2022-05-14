@@ -4,13 +4,16 @@ recipe: default.v1
 
 # Configuration for Rasa NLU.
 # https://rasa.com/docs/rasa/nlu/components/
-language: vn
+language: en
 
 pipeline:
-  - name: custom_pipeline.vi_tokenizers.ViTokenizers
-  - name: custom_pipeline.vi_sentiment.ViSentiment
+  - name: SpacyNLP
+    model: en_core_web_md
+  - name: SpacyTokenizer
+  - name: SpacyFeaturizer
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
   - name: CountVectorsFeaturizer
     OOV_token: _oov_
     token_pattern: (?u)\b\w+\b
@@ -22,18 +25,18 @@ pipeline:
     analyzer: char
     min_ngram: 3
     max_ngram: 5
+  - name: CRFEntityExtractor
   - name: RegexEntityExtractor
     case_sensitive: False
     use_lookup_tables: True
     use_regexes: True
   - name: DIETClassifier
-    entity_recognition: true
-    epochs: 300
+    entity_recognition: false
+    epochs: 200
     ranking_length: 5
   - name: EntitySynonymMapper
   - name: FallbackClassifier
     threshold: 0.7
-    ambiguity_threshold: 0.1
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/

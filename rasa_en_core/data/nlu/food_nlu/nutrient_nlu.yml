@@ -1,0 +1,11 @@
+version: '3.1'
+
+nlu:
+  - intent: ask_for_nutrient
+    examples: |
+      - [calo](nutrient) [123](min_number)
+      - [calo](nutrient) [234](min_number)-[456](max_number)
+      - [fat](nutrient) -[324](max_number)
+      - [fat](nutrient) [324](min_number) - [2341](max_number)
+      - [calo](nutrient) [320](min_number)-[520](max_number) and [fat](nutrient) [23](min_number) - [345](max_number)
+      - [fat](nutrient) -[555](max_number) and [calo](nutrient) [23](min_number)

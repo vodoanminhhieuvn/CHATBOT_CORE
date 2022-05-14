@@ -32,7 +32,7 @@ class ActionSubmitFeedback(Action):
                   "sentiment": f"{sentiment_entity[0]}"})
 
         if response.status_code == 201:
-            dispatcher.utter_message(text="Cảm ơn bạn đóng góp ý kiến")
+            dispatcher.utter_message(text="Xong rùi cảm ơn bạn đóng góp ý kiến nha")
         else:
             dispatcher.utter_message(text="Đã xảy ra lỗi bên phía bọn mình")
             # dispatcher.utter_message(text=tracker.latest_message.values)

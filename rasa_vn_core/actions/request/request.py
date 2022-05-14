@@ -5,7 +5,7 @@ import requests
 
 async def request_json_api(url: str, json: any) -> requests.Response:
     try:
-        response = await requests.post(
+        response = requests.post(
             url=url, json=json)
 
         return response

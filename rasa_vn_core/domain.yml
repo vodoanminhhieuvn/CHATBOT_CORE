@@ -10,13 +10,25 @@ intents:
   - mood_unhappy
   - out_of_scope
   - request_feedback
+  - ask_for_nutrient
+  - ask_for_meal_plan
+  - how_to_cook
+
 actions:
   - action_default_fallback
   - action_defination
   - action_submit_feedback
+  - action_set_nutrient
+
 entities:
   - sentiment
   - defination
+  - min
+  - max
+  - nutrient
+  - diet
+  - number
+
 slots:
   defination:
     type: text
@@ -34,6 +46,7 @@ forms:
   feedback_form:
     required_slots:
       - feedback
+
 responses:
   utter_greet:
     - text: Hey! How are you?

@@ -22,6 +22,11 @@ class ActionDefination(Action):
         for defination in list_defination_entities:
             if valid_defination(defination):
                 for text in get_defination_data(defination):
-                    dispatcher.utter_message(text)
+                    dispatcher.utter_message(text,
+                                             buttons=[{"payload": "/affirm", "title": "Yes"},
+                                                      {"payload": "/deny", "title": "No"}, ])
+
+        dispatcher.utter_message(buttons=[{"payload": "/affirm", "title": "Yes"},
+                                          {"payload": "/deny", "title": "No"}, ])
 
         return []
