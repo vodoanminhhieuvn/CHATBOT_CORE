@@ -1,0 +1,11 @@
+version: '3.1'
+
+nlu:
+  - intent: ask_what_is_cook_technique
+    examples: |
+      - what is cook technique actually ?
+      - can you explain cook technique ?
+      - cook technique ?
+      - how can i cook my food ?
+      - how many way i can cook food ?
+      - how can i provide cook technique to you ?

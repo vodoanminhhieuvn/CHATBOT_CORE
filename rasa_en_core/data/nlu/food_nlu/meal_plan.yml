@@ -1,0 +1,9 @@
+version: '3.1'
+
+nlu:
+  - intent: ask_for_create_meal_plan
+    examples: |
+      - create meal plan
+      - what plan [today](target_time) ?
+      - what need i to eat for [2000](target_calories) calories [day](target_time)
+      - what meal plan i have here

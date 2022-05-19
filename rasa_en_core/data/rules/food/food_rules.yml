@@ -1,7 +1,12 @@
 version: '3.1'
 
 rules:
-  - rule: set nutrient
+  - rule: User don't know about cook technique
     steps:
-      - intent: ask_for_nutrient
-      - action: action_set_nutrient
+      - intent: ask_what_is_cook_technique
+      - action: action_what_is_cook_technique
+
+  - rule: set ingredient
+    steps:
+      - intent: set_ingredients
+      - action: action_set_ingredients

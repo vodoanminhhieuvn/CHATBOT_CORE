@@ -1,0 +1,25 @@
+version: '3.1'
+
+nlu:
+  - intent: set_ingredients
+    examples: |
+      - what recipe with [rice](ingredient)
+      - what dish come with apple
+      - are there any good fish dish
+      - get me some meat
+      - I want to make some food with tuna
+      - What can i cook with brocoli
+      - I want to make something with chicken
+      - what recipe with [Baking](cook_technique)
+      - What is rice boiling
+      - is apple cutting good?
+      - what recipe with rice carrot oiling
+      - what dish come with apple and banana
+      - are there any good fish
+      - can you show few meat drying
+      - I want to make some food with tuna frying
+      - Which are carrot dicing and chicken milling?
+      - can I make anything with carrot and dicing?
+      - I want to make something with chicken
+      - i want to cook with boiling
+      - i want to cook boiling

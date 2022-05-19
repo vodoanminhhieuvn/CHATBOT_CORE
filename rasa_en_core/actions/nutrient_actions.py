@@ -5,7 +5,7 @@ from rasa_sdk.events import SlotSet
 from rasa_sdk.executor import CollectingDispatcher
 
 
-class ActionDefination(Action):
+class ActionSetNutrient(Action):
 
     def name(self) -> Text:
         return "action_set_nutrient"
@@ -20,7 +20,7 @@ class ActionDefination(Action):
 
         blobs = tracker.latest_message['entities']
         for blob in blobs:
-            # ? Taking current slot value
+            # step Taking current slot value
             if blob['entity'] == 'nutrient':
                 current_nutrient = blob['value']
                 list_nutrient_value.update({
@@ -28,7 +28,7 @@ class ActionDefination(Action):
                     f'max_{current_nutrient}': tracker.get_slot(f'max_{current_nutrient}')
                 })
 
-            # ? Checking min_number and swap if needed
+            # step Checking min_number and swap if needed
             if blob['entity'] == 'min_number':
                 if int(blob['value']) > list_nutrient_value[f'max_{current_nutrient}']:
                     list_nutrient_value[f'min_{current_nutrient}'] = list_nutrient_value[f'max_{current_nutrient}']
@@ -37,7 +37,7 @@ class ActionDefination(Action):
                 else:
                     list_nutrient_value[f'min_{current_nutrient}'] = int(blob['value'])
 
-            # ? Checking max_number and swap if needed
+            # step Checking max_number and swap if needed
             if blob['entity'] == 'max_number':
                 if int(blob['value']) < list_nutrient_value[f'min_{current_nutrient}']:
                     list_nutrient_value[f'max_{current_nutrient}'] = list_nutrient_value[f'max_{current_nutrient}']
@@ -45,5 +45,7 @@ class ActionDefination(Action):
                     list_nutrient_value[f'min_{current_nutrient}'] = int(blob['value'])
                 else:
                     list_nutrient_value[f'max_{current_nutrient}'] = int(blob['value'])
+
+        print(list_nutrient_value)
 
         return [SlotSet(slot_name, slot_value) for slot_name, slot_value in list_nutrient_value.items()]

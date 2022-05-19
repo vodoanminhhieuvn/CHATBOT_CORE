@@ -1,0 +1,214 @@
+{
+  "week": {
+    "monday": {
+      "meals": [{
+        "id": 496933,
+        "imageType": "jpg",
+        "title": "Apple Walnut Delight Cake",
+        "readyInMinutes": 90,
+        "servings": 8,
+        "sourceUrl": "https://kitchenconfidante.com/simple-sundays-apple-walnut-delight-cake-recipe"
+      }, {
+        "id": 666033,
+        "imageType": "jpg",
+        "title": "egg biryani , how to make easy scrambled egg biryani in 30 mins",
+        "readyInMinutes": 30,
+        "servings": 3,
+        "sourceUrl": "http://indianhealthyrecipes.com/egg-biryani/"
+      }, {
+        "id": 1182269,
+        "imageType": "jpg",
+        "title": "Air Fryer Fried Chicken",
+        "readyInMinutes": 195,
+        "servings": 5,
+        "sourceUrl": "https://www.lifesambrosia.com/air-fryer-fried-chicken/"
+      }],
+      "nutrients": {
+        "calories": 1870.04,
+        "protein": 56.6,
+        "fat": 74.08,
+        "carbohydrates": 245.47
+      }
+    },
+    "tuesday": {
+      "meals": [{
+        "id": 245722,
+        "imageType": "jpg",
+        "title": "Carrot Cake",
+        "readyInMinutes": 75,
+        "servings": 12,
+        "sourceUrl": "https://www.simplyrecipes.com/recipes/carrot_cake/"
+      }, {
+        "id": 149251,
+        "imageType": "jpg",
+        "title": "Summer Sun Gold Tomato Pasta with Bread Crumbs",
+        "readyInMinutes": 30,
+        "servings": 4,
+        "sourceUrl": "http://www.seriouseats.com/recipes/2013/07/summer-sun-gold-tomato-pasta-bread-crumbs-recipe.html"
+      }, {
+        "id": 649921,
+        "imageType": "jpg",
+        "title": "Lentil Fritters (Parippu Vada)",
+        "readyInMinutes": 45,
+        "servings": 2,
+        "sourceUrl": "https://spoonacular.com/lentil-fritters-parippu-vada-649921"
+      }],
+      "nutrients": {
+        "calories": 1812.19,
+        "protein": 47.13,
+        "fat": 56.95,
+        "carbohydrates": 285.34
+      }
+    },
+    "wednesday": {
+      "meals": [{
+        "id": 579674,
+        "imageType": "jpg",
+        "title": "Homemade Caramel Sauce",
+        "readyInMinutes": 30,
+        "servings": 6,
+        "sourceUrl": "http://lemon-sugar.com/2013/10/homemade-caramel-sauce.html/"
+      }, {
+        "id": 423327,
+        "imageType": "jpg",
+        "title": "Italian Style Pizzas",
+        "readyInMinutes": 25,
+        "servings": 4,
+        "sourceUrl": "http://www.tasteofhome.com/Recipes/italian-style-pizzas"
+      }, {
+        "id": 124219,
+        "imageType": "jpg",
+        "title": "Cornbread Stuffing with Sage and Dried Fruits",
+        "readyInMinutes": 90,
+        "servings": 10,
+        "sourceUrl": "http://www.myrecipes.com/recipe/cornbread-stuffing-with-sage-50400000107331/"
+      }],
+      "nutrients": {
+        "calories": 1803.83,
+        "protein": 41.3,
+        "fat": 63.02,
+        "carbohydrates": 271.11
+      }
+    },
+    "thursday": {
+      "meals": [{
+        "id": 941241,
+        "imageType": "jpg",
+        "title": "Ultimate Rice Crispy Treats",
+        "readyInMinutes": 45,
+        "servings": 12,
+        "sourceUrl": "https://heatherlikesfood.com/ultimate-rice-crispy-treats/"
+      }, {
+        "id": 528853,
+        "imageType": "jpg",
+        "title": "Fast and Easy Dutch Baby Pancake",
+        "readyInMinutes": 20,
+        "servings": 1,
+        "sourceUrl": "http://www.countrycleaver.com/2014/04/fast-easy-dutch-baby-pancake.html"
+      }, {
+        "id": 178086,
+        "imageType": "jpg",
+        "title": "Swiss Rye Strata",
+        "readyInMinutes": 185,
+        "servings": 2,
+        "sourceUrl": "https://www.bettycrocker.com/recipes/swiss-rye-strata/20b96458-a8b7-4217-be09-5d74649bd8f7"
+      }],
+      "nutrients": {
+        "calories": 2075.58,
+        "protein": 59.62,
+        "fat": 75.13,
+        "carbohydrates": 293.79
+      }
+    },
+    "friday": {
+      "meals": [{
+        "id": 1494047,
+        "imageType": "jpg",
+        "title": "Strawberry Shortcake with Lemon Cream Sauce",
+        "readyInMinutes": 27,
+        "servings": 6,
+        "sourceUrl": "https://www.lovebakesgoodcakes.com/strawberry-shortcake-with-lemon-crea/"
+      }, {
+        "id": 294292,
+        "imageType": "jpeg",
+        "title": "Fried Rice",
+        "readyInMinutes": 27,
+        "servings": 6,
+        "sourceUrl": "http://www.foodnetwork.com/recipes/food-network-kitchens/fried-rice-recipe2.html"
+      }, {
+        "id": 507267,
+        "imageType": "jpg",
+        "title": "Noodle Kugel",
+        "readyInMinutes": 75,
+        "servings": 10,
+        "sourceUrl": "http://www.browneyedbaker.com/2011/09/30/noodle-kugel/"
+      }],
+      "nutrients": {
+        "calories": 1791.69,
+        "protein": 44.24,
+        "fat": 64.91,
+        "carbohydrates": 261.12
+      }
+    },
+    "saturday": {
+      "meals": [{
+        "id": 921347,
+        "imageType": "jpg",
+        "title": "Apple Pie Fried Ice Cream Cake",
+        "readyInMinutes": 255,
+        "servings": 16,
+        "sourceUrl": "http://ohsweetbasil.com/apple-pie-fried-ice-cream-cake-recipe/"
+      }, {
+        "id": 318560,
+        "imageType": "jpeg",
+        "title": "Pasta al Forno",
+        "readyInMinutes": 30,
+        "servings": 4,
+        "sourceUrl": "http://www.foodnetwork.com/recipes/rachael-ray/pasta-al-forno-recipe.html"
+      }, {
+        "id": 643143,
+        "imageType": "jpg",
+        "title": "Fluffy Citrus Coconut Pancakes",
+        "readyInMinutes": 30,
+        "servings": 2,
+        "sourceUrl": "https://spoonacular.com/fluffy-citrus-coconut-pancakes-643143"
+      }],
+      "nutrients": {
+        "calories": 1887.29,
+        "protein": 44.74,
+        "fat": 73.14,
+        "carbohydrates": 291.5
+      }
+    },
+    "sunday": {
+      "meals": [{
+        "id": 509787,
+        "imageType": "jpg",
+        "title": "Peppermint Patty Cookies",
+        "readyInMinutes": 45,
+        "servings": 24,
+        "sourceUrl": "http://www.beantownbaker.com/2011/02/peppermint-patty-cookies.html"
+      }, {
+        "id": 221074,
+        "imageType": "jpg",
+        "title": "Southwestern Gemelli with Bacon",
+        "readyInMinutes": 22,
+        "servings": 4,
+        "sourceUrl": "http://www.myrecipes.com/m/recipe/southwestern-pasta-bacon-50400000123776/"
+      }, {
+        "id": 253968,
+        "imageType": "jpg",
+        "title": "White Risotto with Fava Puree",
+        "readyInMinutes": 60,
+        "servings": 4,
+        "sourceUrl": "http://www.sippitysup.com/recipe/white-risotto-with-fava-puree/"
+      }],
+      "nutrients": {
+        "calories": 1759.16,
+        "protein": 46.31,
+        "fat": 58.23,
+        "carbohydrates": 244.17
+      }
+    }
+  }
+}

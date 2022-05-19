@@ -1,0 +1,30 @@
+{
+  "meals": [{
+    "id": 555617,
+    "imageType": "jpg",
+    "title": "Jamaica and Ginger Granita",
+    "readyInMinutes": 45,
+    "servings": 6,
+    "sourceUrl": "http://www.muybuenocookbook.com/2012/08/jamaica-and-ginger-granita/"
+  }, {
+    "id": 1038442,
+    "imageType": "jpg",
+    "title": "Tex-Mex Sloppy Joes",
+    "readyInMinutes": 30,
+    "servings": 6,
+    "sourceUrl": "https://dinnerthendessert.com/tex-mex-sloppy-joes/"
+  }, {
+    "id": 1091734,
+    "imageType": "jpg",
+    "title": "Rosemary and Pork Ragu",
+    "readyInMinutes": 55,
+    "servings": 4,
+    "sourceUrl": "https://www.bbcgoodfood.com/recipes/1127648/rosemary-and-pork-ragu"
+  }],
+  "nutrients": {
+    "calories": 2000.3,
+    "protein": 76.09,
+    "fat": 139.32,
+    "carbohydrates": 115.01
+  }
+}

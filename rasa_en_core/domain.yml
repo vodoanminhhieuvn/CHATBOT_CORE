@@ -9,32 +9,47 @@ intents:
   - mood_unhappy
   - bot_challenge
   - ask_for_nutrient
+  - ask_for_create_meal_plan
+  - ask_what_is_cook_technique
+  - set_ingredients
 
 entities:
   - nutrient
   - min_number
   - max_number
+  - target_time
+  - target_calories
+  - ingredient
 
 actions:
   - action_set_nutrient
-
+  - action_find_recipe
+  - action_create_meal_plan
+  - action_what_is_cook_technique
+  - action_set_ingredients
 slots:
-  min_calo:
+  meal_plan_response:
+    type: any
+    mappings:
+      - type: custom
+  food_search_query:
+    type: text
+    mappings:
+      - type: custom
+  min_calories:
     type: float
     initial_value: 200
     min_value: 0.0
     max_value: 5000.0
     mappings:
       - type: custom
-        action: action_set_nutrient
-  max_calo:
+  max_calories:
     type: float
     initial_value: 600
     min_value: 0.0
     max_value: 5000.0
     mappings:
       - type: custom
-        action: action_set_nutrient
   min_fat:
     type: float
     initial_value: 50
@@ -42,7 +57,6 @@ slots:
     max_value: 5000.0
     mappings:
       - type: custom
-        action: action_set_nutrient
   max_fat:
     type: float
     initial_value: 120
@@ -50,7 +64,6 @@ slots:
     max_value: 5000.0
     mappings:
       - type: custom
-        action: action_set_nutrient
 
 responses:
   utter_greet:
