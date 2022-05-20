@@ -10,3 +10,8 @@ rules:
     steps:
       - intent: set_ingredients
       - action: action_set_ingredients
+
+  - rule: answer what is ingredient
+    steps:
+      - intent: ask_what_ingredients
+      - action: action_what_ingredients

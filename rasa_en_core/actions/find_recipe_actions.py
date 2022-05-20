@@ -15,8 +15,19 @@ class ActionFindRecipe(Action):
     async def run(self, dispatcher: CollectingDispatcher,
                   tracker: Tracker,
                   domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        ingredient = ['chicken']
+        search_query = ''
 
-        params = {
-            **FIND_RECIPE_CONFIG,
-        }
+        # step- Check if slot has value or not
+
+        ingredient_list = tracker.get_slot('ingredient_list')
+        cook_technique = tracker.get_slot('cook_technique')
+
+        if not ingredient_list:
+            dispatcher.utter_message("Seem like you haven't provided nay ingredieny yet")
+            dispatcher.utter_message('Please provide me at least one ingredient')
+
+        # step- Send request API
+
+        # step- Create button for user to choose
+
+        return []

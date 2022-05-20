@@ -6,6 +6,25 @@ from rasa_sdk.executor import CollectingDispatcher
 from actions.const.cook_technique import COOK_TECHNIQUE_DESCRIPTION
 
 
+class ActionExplainIngredient(Action):
+    def name(self) -> Text:
+        return "action_what_ingredients"
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict[Text, Any]]:
+        dispatcher.utter_message(
+            'A food ingredient is any substance that is added to a food to achieve a desired effect.')
+        dispatcher.utter_message('The term “food ingredient” includes food additives.')
+        dispatcher.utter_message(
+            'You can type: cook chicken ---or--- I want to cook fish to provide ingredients')
+
+        return []
+
+
 class ActionExplainCookTechniqie(Action):
     def name(self) -> Text:
         return "action_what_is_cook_technique"

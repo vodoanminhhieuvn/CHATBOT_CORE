@@ -23,3 +23,12 @@ nlu:
       - I want to make something with chicken
       - i want to cook with boiling
       - i want to cook boiling
+
+  - intent: ask_what_ingredients
+    examples: |
+      - what is ingredient 
+      - how can i provide ingredient
+      - how can i provide food
+      - add food how ?
+      - add ingredient how so ?
+      - ingredient adding how ?

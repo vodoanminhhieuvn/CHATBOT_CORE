@@ -11,7 +11,7 @@ class ExtractorType:
 
 def get_entities(
         tracker: Tracker, entity,
-        extractor: str = ExtractorType.DIETClassifier) -> Dict[Text, Any]:
+        extractor: str = ExtractorType.DIETClassifier) -> list:
     blobs = tracker.latest_message['entities']
     return [blob['value']
             for blob in blobs
