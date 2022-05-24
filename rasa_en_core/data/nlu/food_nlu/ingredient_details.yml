@@ -1,0 +1,8 @@
+version: '3.1'
+
+nlu:
+  - intent: ask_ingredient_details
+    examples: |
+      - ingredient detail [0](detail_index)
+      - ingredient infor [2](detail_index)
+      - ingredient information [3](detail_index)

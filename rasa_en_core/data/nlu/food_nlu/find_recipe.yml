@@ -1,0 +1,12 @@
+version: '3.1'
+
+nlu:
+  - intent: ask_find_recipe
+    examples: |
+      - find me some recipe please
+      - get me some recipe
+      - find food
+      - create recipe 
+      - search recipe
+      - search
+      - get recipe

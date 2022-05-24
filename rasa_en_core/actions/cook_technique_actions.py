@@ -8,7 +8,7 @@ from actions.utils.get_entities import get_entities
 from actions.utils.get_entities import ExtractorType
 
 
-class ActionSetIngredient(Action):
+class ActionSetCookTechnique(Action):
     def name(self) -> Text:
         return "action_set_cook_technique"
 

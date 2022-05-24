@@ -4,7 +4,8 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.events import SlotSet
 from rasa_sdk.executor import CollectingDispatcher
 
-from actions.request.http_url import FIND_RECIPE_CONFIG
+from actions.request.http_url import FIND_RECIPE_CONFIG, EDAMAM_TARGET_URL
+from actions.request.request import request_get_api
 
 
 class ActionFindRecipe(Action):
@@ -15,7 +16,6 @@ class ActionFindRecipe(Action):
     async def run(self, dispatcher: CollectingDispatcher,
                   tracker: Tracker,
                   domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        search_query = ''
 
         # step- Check if slot has value or not
 
@@ -23,11 +23,22 @@ class ActionFindRecipe(Action):
         cook_technique = tracker.get_slot('cook_technique')
 
         if not ingredient_list:
-            dispatcher.utter_message("Seem like you haven't provided nay ingredieny yet")
-            dispatcher.utter_message('Please provide me at least one ingredient')
+            dispatcher.utter_message(
+                "Seem like you haven't provided any ingredieny yet")
+            dispatcher.utter_message(
+                'Please provide me at least one ingredient')
 
         # step- Send request API
+        params = {
+            'q': f"{' '.join(str(ingredient) for ingredient in ingredient_list)} {cook_technique}",
+            **FIND_RECIPE_CONFIG
+        }
+        response = request_get_api(url=EDAMAM_TARGET_URL, params=params)
 
         # step- Create button for user to choose
+        buttons = [{"title": f"{index}-{hit['recipe']['label']}", "payload": f"detail {index}"}
+                   for index, hit in enumerate(response.json()['hits'][:5])]
 
-        return []
+        dispatcher.utter_message(buttons=buttons)
+
+        return [SlotSet('recipe_search_response', response.json())]

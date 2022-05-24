@@ -15,3 +15,28 @@ rules:
     steps:
       - intent: ask_what_ingredients
       - action: action_what_ingredients
+
+  - rule: get recipe for user
+    steps:
+      - intent: ask_find_recipe
+      - action: action_find_recipe
+
+  - rule: show detail recipe
+    steps:
+      - intent: ask_recipe_detail
+      - action: action_recipe_detail
+
+  - rule: show how to cook recipe
+    steps:
+      - intent: ask_how_to_cook
+      - action: action_how_to_cook
+
+  - rule: ingredient detail
+    steps:
+      - intent: ask_ingredient_details
+      - action: action_ingredient_details
+
+  - rule: previous recipe search
+    - steps:
+      - intent: ask_previous_recipes
+      - action: action_previous_recipe

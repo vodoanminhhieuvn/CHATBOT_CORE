@@ -18,6 +18,9 @@ class ActionSetIngredient(Action):
             tracker: Tracker,
             domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
+
+        slot_set_list = []
+
         # step Extracting entities
         ingredient_entities = get_entities(
             tracker=tracker,
@@ -37,21 +40,20 @@ class ActionSetIngredient(Action):
             dispatcher.utter_message("I understand you want to provide searching params ?")
             dispatcher.utter_message("but I can't any infor")
             dispatcher.utter_message("can you repeat again ?")
+            return []
 
         if not ingredient_entities:
             dispatcher.utter_message("Seem like you don't provide any ingredients ?")
+            return []
+        else:
+            slot_set_list.append(SlotSet('ingredient_list', ingredient_entities))
+            dispatcher.utter_message(f"Your current ingredients: {' '.join(iter(ingredient_entities))}")
 
         if not cook_technique_entities:
             dispatcher.utter_message("Seem like you don't provide any cook technique ?")
-
-        # Step set slot and send message to user
-
-        list_ingredient_string = " ".join(iter(ingredient_entities))
-
-        slot_set_list = [SlotSet('ingredient_list', [iter(ingredient_entities)]),
-                         SlotSet('cook_technique', cook_technique_entities[0])]
-
-        dispatcher.utter_message(f"Your current ingredients: {list_ingredient_string}")
-        dispatcher.utter_message(f"Your cook technique: {cook_technique_entities[0]}")
+            slot_set_list.append(SlotSet('cook_technique', ''))
+        else:
+            slot_set_list.append(SlotSet('cook_technique', cook_technique_entities[0]))
+            dispatcher.utter_message(f"Your cook technique: {cook_technique_entities[0]}")
 
         return slot_set_list

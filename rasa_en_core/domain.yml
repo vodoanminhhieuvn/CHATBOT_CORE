@@ -13,6 +13,9 @@ intents:
   - ask_what_is_cook_technique
   - set_ingredients
   - ask_what_ingredients
+  - ask_find_recipe
+  - ask_how_to_cook
+  - ask_ingredient_details
 
 entities:
   - nutrient
@@ -22,6 +25,7 @@ entities:
   - target_calories
   - ingredient
   - cook_technique
+  - detail_index
 
 actions:
   - action_set_nutrient
@@ -30,9 +34,21 @@ actions:
   - action_what_is_cook_technique
   - action_set_ingredients
   - action_what_ingredients
+  - action_recipe_detail
+  - action_how_to_cook
+  - action_ingredient_details
+  - action_previous_recipe
 
 slots:
   meal_plan_response:
+    type: any
+    mappings:
+      - type: custom
+  recipe_search_response:
+    type: any
+    mappings:
+      - type: custom
+  ingredient_search:
     type: any
     mappings:
       - type: custom

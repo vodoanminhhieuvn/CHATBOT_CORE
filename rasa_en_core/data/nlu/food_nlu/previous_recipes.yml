@@ -1,0 +1,12 @@
+version: '3.1'
+
+nlu:
+  - intent: ask_previous_recipes
+    examples: |
+      - show me preivous recipes
+      - previous search
+      - past search
+      - roll back recipes
+      - roll back search
+      - where are my recipes
+      - back to recipes

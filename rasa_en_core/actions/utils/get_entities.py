@@ -10,7 +10,8 @@ class ExtractorType:
 
 
 def get_entities(
-        tracker: Tracker, entity,
+        tracker: Tracker,
+        entity,
         extractor: str = ExtractorType.DIETClassifier) -> list:
     blobs = tracker.latest_message['entities']
     return [blob['value']
