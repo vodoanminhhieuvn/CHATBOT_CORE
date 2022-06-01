@@ -16,6 +16,8 @@ intents:
   - ask_find_recipe
   - ask_how_to_cook
   - ask_ingredient_details
+  - ask_previous_recipes
+  - ask_for_diet
 
 entities:
   - nutrient
@@ -26,6 +28,7 @@ entities:
   - ingredient
   - cook_technique
   - detail_index
+  - diet
 
 actions:
   - action_set_nutrient
@@ -38,6 +41,7 @@ actions:
   - action_how_to_cook
   - action_ingredient_details
   - action_previous_recipe
+  - action_set_diet
 
 slots:
   meal_plan_response:
@@ -53,6 +57,10 @@ slots:
     mappings:
       - type: custom
   ingredient_list:
+    type: list
+    mappings:
+      - type: custom
+  diet_list:
     type: list
     mappings:
       - type: custom

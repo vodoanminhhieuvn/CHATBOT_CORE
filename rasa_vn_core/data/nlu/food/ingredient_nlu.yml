@@ -1,0 +1,19 @@
+version: '3.1'
+
+nlu:
+  - intent: set_ingredients
+    examples: |
+      - nấu [gà](ingredient)
+      - chế biến cá 
+      - mình muốn làm món cá
+      - món gà [chiên](cook_technique)
+      - cho mình vài món vịt
+      - làm món cá
+
+  - intent: ask_what_ingredients
+    examples: |
+      - thành phần nguyên liệu là gì
+      - cách thêm nguyên liệu
+      - làm sao thêm đồ ăn
+      - thêm nguyên liệu ?
+      - làm sao cung cấp nguyên liệu nhỉ ?

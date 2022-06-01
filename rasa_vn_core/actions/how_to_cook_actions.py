@@ -36,6 +36,6 @@ class ActionHowToCook(Action):
         )
 
         dispatcher.utter_message(ingredient_messages)
-        # dispatcher.utter_message(buttons=ingredient_buttons)
+        dispatcher.utter_message(buttons=ingredient_buttons)
 
         return [SlotSet('ingredient_search', recipe_user_need['ingredients'])]

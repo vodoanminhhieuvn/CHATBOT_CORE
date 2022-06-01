@@ -1,18 +1,20 @@
 version: '3.1'
 intents:
-  - affirm
-  - ask_for_defination
-  - bot_challenge
-  - deny
-  - goodbye
   - greet
+  - goodbye
+  - affirm
+  - deny
   - mood_great
   - mood_unhappy
-  - out_of_scope
-  - request_feedback
+  - bot_challenge
   - ask_for_nutrient
-  - ask_for_meal_plan
-  - how_to_cook
+  - ask_for_create_meal_plan
+  - ask_what_is_cook_technique
+  - set_ingredients
+  - ask_what_ingredients
+  - ask_find_recipe
+  - ask_how_to_cook
+  - ask_ingredient_details
 
 actions:
   - action_default_fallback
@@ -21,27 +23,74 @@ actions:
   - action_set_nutrient
 
 entities:
-  - sentiment
-  - defination
-  - min
-  - max
   - nutrient
-  - diet
-  - number
+  - min_number
+  - max_number
+  - target_time
+  - target_calories
+  - ingredient
+  - cook_technique
+  - detail_index
+  - cuisine
 
 slots:
-  defination:
+  meal_plan_response:
+    type: any
+    mappings:
+      - type: custom
+  recipe_search_response:
+    type: any
+    mappings:
+      - type: custom
+  ingredient_search:
+    type: any
+    mappings:
+      - type: custom
+  ingredient_list:
+    type: list
+    mappings:
+      - type: custom
+  cuisine:
     type: text
     mappings:
       - type: from_entity
-        entity: defination
-  feedback:
+        entity: cuisine
+  cook_technique:
     type: text
     mappings:
-      - type: from_text
-        conditions:
-          - active_loop: feedback_form
-            requested_slot: feedback
+      - type: custom
+  food_search_query:
+    type: text
+    mappings:
+      - type: custom
+  min_calories:
+    type: float
+    initial_value: 200
+    min_value: 0.0
+    max_value: 5000.0
+    mappings:
+      - type: custom
+  max_calories:
+    type: float
+    initial_value: 600
+    min_value: 0.0
+    max_value: 5000.0
+    mappings:
+      - type: custom
+  min_fat:
+    type: float
+    initial_value: 50
+    min_value: 0.0
+    max_value: 5000.0
+    mappings:
+      - type: custom
+  max_fat:
+    type: float
+    initial_value: 120
+    min_value: 0.0
+    max_value: 5000.0
+    mappings:
+      - type: custom
 forms:
   feedback_form:
     required_slots:

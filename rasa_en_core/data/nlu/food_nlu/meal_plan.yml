@@ -7,3 +7,8 @@ nlu:
       - what plan [today](target_time) ?
       - what need i to eat for [2000](target_calories) calories [day](target_time)
       - what meal plan i have here
+      - create meal plan for [vegan](diet)
+      - [vegan](diet) meal
+      - [Vegetarian](diet) meal
+      - create meal for [vegan](diet)
+      - create meal for [Vegetarian](diet)

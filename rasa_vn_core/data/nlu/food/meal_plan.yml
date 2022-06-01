@@ -1,9 +1,14 @@
 version: '3.1'
 
 nlu:
-  - intent: ask_for_meal_plan
+  - intent: ask_for_create_meal_plan
     examples: |
-      - Bữa nay làm món gì
-      - thực đơn hôm nay có gì ?
-      - hôm nay ăn gì ta ?
-      - bot cho mình vài món với
+      - tạo bữa ăn
+      - tạo thực đơn ngày
+      - tạo bữa ăn nguyên ngày
+      - thực đơn hôm nay
+      - thực đơn
+      - tạo thực đơn với [2000](target_calories)
+      - thực đơn [300](target_calories)
+      - thực đơn [70](target_calories)
+      - thực đơn [4](target_calories)

@@ -1,6 +1,0 @@
-version: '3.1'
-
-nlu:
-  - intent: ask_for_nutrient
-    examples: |
-      - Generate meal plan for [Vegan](diet)

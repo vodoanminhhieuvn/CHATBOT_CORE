@@ -37,6 +37,11 @@ rules:
       - action: action_ingredient_details
 
   - rule: previous recipe search
-    - steps:
+    steps:
       - intent: ask_previous_recipes
       - action: action_previous_recipe
+
+  - rule: set diet setting
+    steps:
+      - intent: ask_for_diet
+      - action: action_set_diet

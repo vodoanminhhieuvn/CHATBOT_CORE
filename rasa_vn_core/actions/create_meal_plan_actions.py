@@ -23,25 +23,12 @@ class ActionCreateMealPlan(Action):
         except IndexError:
             target_calories = 2000
 
-        if diet_slot := tracker.get_slot('diet_list'):
-            list_diet = diet_slot
-        else:
-            list_diet = get_entities(tracker, 'diet')
-
         # Step get slot nutrient value
         params = {
             'timeFrame': 'day',
             'targetCalories': f"{target_calories}",
             **CREATE_MEAL_PLAN_CONFIG
         }
-
-        if list_diet:
-            params['diet'] = list_diet
-            diet_message = "".join(
-                f"{diet} \n"
-                for diet in list_diet
-            )
-            dispatcher.utter_message(diet_message)
 
         # Step request to API
         response = request_get_api(url=GENERATE_MEAL_URL, params=params)

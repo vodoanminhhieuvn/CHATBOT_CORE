@@ -1,0 +1,12 @@
+version: '3.1'
+
+nlu:
+  - intent: ask_what_is_cook_technique
+    examples: |
+      - có bao nhiêu cách nấu
+      - kỹ thuật nấu ăn là gì
+      - giải thích kỹ thuật nấu ăn
+      - kỹ thuật nấu ăn ?
+      - làm sao để chế biến món ăn ?
+      - có bao nhiêu cách để nấu ăn
+      - làm sao cung cấp cách nấu ăn ?

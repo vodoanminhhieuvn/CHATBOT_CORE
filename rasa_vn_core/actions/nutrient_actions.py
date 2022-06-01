@@ -20,7 +20,7 @@ class ActionSetNutrient(Action):
 
         blobs = tracker.latest_message['entities']
         for blob in blobs:
-            # # Taking current slot value
+            # step Taking current slot value
             if blob['entity'] == 'nutrient':
                 current_nutrient = blob['value']
                 list_nutrient_value.update({
@@ -28,7 +28,7 @@ class ActionSetNutrient(Action):
                     f'max_{current_nutrient}': tracker.get_slot(f'max_{current_nutrient}')
                 })
 
-            # # Checking min_number and swap if needed
+            # step Checking min_number and swap if needed
             if blob['entity'] == 'min_number':
                 if int(blob['value']) > list_nutrient_value[f'max_{current_nutrient}']:
                     list_nutrient_value[f'min_{current_nutrient}'] = list_nutrient_value[f'max_{current_nutrient}']
@@ -37,7 +37,7 @@ class ActionSetNutrient(Action):
                 else:
                     list_nutrient_value[f'min_{current_nutrient}'] = int(blob['value'])
 
-            # # Checking max_number and swap if needed
+            # step Checking max_number and swap if needed
             if blob['entity'] == 'max_number':
                 if int(blob['value']) < list_nutrient_value[f'min_{current_nutrient}']:
                     list_nutrient_value[f'max_{current_nutrient}'] = list_nutrient_value[f'max_{current_nutrient}']
@@ -47,8 +47,8 @@ class ActionSetNutrient(Action):
                     list_nutrient_value[f'max_{current_nutrient}'] = int(blob['value'])
 
         nutrient_messages = "".join(
-            f"{slot_name}:  {slot_value}\n"
-            for slot_name, slot_value in list_nutrient_value.items()
+            f"{key}:  {value}\n"
+            for key, value in list_nutrient_value.items()
         )
 
         dispatcher.utter_message(nutrient_messages)

@@ -30,7 +30,7 @@ pipeline:
     use_lookup_tables: True
     use_regexes: True
   - name: DIETClassifier
-    epochs: 300
+    epochs: 350
     ranking_length: 5
   - name: EntitySynonymMapper
   - name: FallbackClassifier

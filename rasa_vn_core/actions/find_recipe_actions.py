@@ -24,10 +24,9 @@ class ActionFindRecipe(Action):
 
         if not ingredient_list:
             dispatcher.utter_message(
-                "Seem like you haven't provided any ingredient yet")
+                "Seem like you haven't provided any ingredieny yet")
             dispatcher.utter_message(
                 'Please provide me at least one ingredient')
-            return []
 
         # step- Send request API
         params = {

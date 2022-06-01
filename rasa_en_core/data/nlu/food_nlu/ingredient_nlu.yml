@@ -11,8 +11,6 @@ nlu:
       - What can i cook with brocoli
       - I want to make something with chicken
       - what recipe with [Baking](cook_technique)
-      - What is rice boiling
-      - is apple cutting good?
       - what recipe with rice carrot oiling
       - what dish come with apple and banana
       - are there any good fish
@@ -22,7 +20,6 @@ nlu:
       - can I make anything with carrot and dicing?
       - I want to make something with chicken
       - i want to cook with boiling
-      - i want to cook boiling
 
   - intent: ask_what_ingredients
     examples: |
