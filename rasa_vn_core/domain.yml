@@ -15,12 +15,22 @@ intents:
   - ask_find_recipe
   - ask_how_to_cook
   - ask_ingredient_details
+  - provide_cook_technique
 
 actions:
-  - action_default_fallback
-  - action_defination
-  - action_submit_feedback
   - action_set_nutrient
+  - action_find_recipe
+  - action_create_meal_plan
+  - action_what_is_cook_technique
+  - action_set_ingredients
+  - action_what_ingredients
+  - action_recipe_detail
+  - action_how_to_cook
+  - action_ingredient_details
+  - action_previous_recipe
+  - action_set_diet
+  - action_explain_specific_technique
+  - action_set_cook_technique
 
 entities:
   - nutrient

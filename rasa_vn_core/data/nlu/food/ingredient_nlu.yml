@@ -9,6 +9,7 @@ nlu:
       - món gà [chiên](cook_technique)
       - cho mình vài món vịt
       - làm món cá
+      - mình muốn nấu gà
 
   - intent: ask_what_ingredients
     examples: |

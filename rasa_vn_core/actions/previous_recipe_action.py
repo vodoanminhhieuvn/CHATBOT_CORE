@@ -20,13 +20,13 @@ class ActionPreviousRecipe(Action):
     ) -> List[Dict[Text, Any]]:
         recipe_hits = tracker.get_slot('recipe_search_response')
 
-        if recipe_hits:
-            dispatcher.utter_message("Seem like you have had any recipe search yet")
+        if not recipe_hits:
+            dispatcher.utter_message("Bạn chưa có tìm món nào :<")
             return []
 
-        recipe_buttons = [{"title": f"{index}-{hit['recipe']['label']}", "payload": f"detail {index}"}
-                          for index, hit in enumerate(recipe_hits)]
+        buttons = [{"title": f"{index}-{hit['Name']}", "payload": f"chế biến món {index}"}
+                   for index, hit in enumerate(recipe_hits['recipes'])]
 
-        dispatcher.utter_message(buttons=recipe_buttons)
+        dispatcher.utter_message(buttons=buttons)
 
         return []

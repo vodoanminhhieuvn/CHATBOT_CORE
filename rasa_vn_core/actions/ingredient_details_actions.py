@@ -25,7 +25,7 @@ class ActionIngredientDetail(Action):
             ingredient_user_need = ingredient_search[int(recipe_index[0])]
 
         else:
-            dispatcher.utter_message("Seem like you missing position of ingredient")
+            dispatcher.utter_message("Hình như bạn quên chọn vị trí món ăn")
             return[]
 
         dispatcher.utter_message(

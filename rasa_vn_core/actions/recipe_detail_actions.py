@@ -4,10 +4,9 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.events import SlotSet
 from rasa_sdk.executor import CollectingDispatcher
 
-from actions.request.http_url import FIND_RECIPE_CONFIG, EDAMAM_TARGET_URL
-from actions.request.request import request_get_api
-
 from actions.utils.get_entities import get_entities
+
+# TODO Đưa thông tin chi tiết món ăn
 
 
 class ActionRecipeDetail(Action):

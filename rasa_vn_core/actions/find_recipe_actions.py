@@ -4,8 +4,10 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.events import SlotSet
 from rasa_sdk.executor import CollectingDispatcher
 
-from actions.request.http_url import FIND_RECIPE_CONFIG, EDAMAM_TARGET_URL
 from actions.request.request import request_get_api
+from actions.request.http_url import SEARCH_URL
+
+# TODO Tìm kiếm món ăn
 
 
 class ActionFindRecipe(Action):
@@ -31,13 +33,13 @@ class ActionFindRecipe(Action):
         # step- Send request API
         params = {
             'q': f"{' '.join(str(ingredient) for ingredient in ingredient_list)} {cook_technique}",
-            **FIND_RECIPE_CONFIG
         }
-        response = request_get_api(url=EDAMAM_TARGET_URL, params=params)
+
+        response = request_get_api(url=SEARCH_URL, params=params)
 
         # step- Create button for user to choose
-        buttons = [{"title": f"{index}-{hit['recipe']['label']}", "payload": f"detail {index}"}
-                   for index, hit in enumerate(response.json()['hits'][:5])]
+        buttons = [{"title": f"{index}-{hit['Name']}", "payload": f"chế biến món {index}"}
+                   for index, hit in enumerate(response.json()['recipes'])]
 
         dispatcher.utter_message(buttons=buttons)
 

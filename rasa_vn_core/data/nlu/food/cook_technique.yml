@@ -10,3 +10,10 @@ nlu:
       - làm sao để chế biến món ăn ?
       - có bao nhiêu cách để nấu ăn
       - làm sao cung cấp cách nấu ăn ?
+
+  - intent: provide_cook_technique
+    examples: |
+      - nấu kiểu [chiên](cook_technique)
+      - mình muốn luộc
+      - minh muốn chiên
+      - chiên đi

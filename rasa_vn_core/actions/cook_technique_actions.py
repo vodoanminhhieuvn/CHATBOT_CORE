@@ -23,10 +23,10 @@ class ActionSetCookTechnique(Action):
         if cook_technique_entities := get_entities(tracker=tracker, entity='cook_technique',
                                                    extractor=ExtractorType.RegexEntityExtractor):
             slot_set_list.append(SlotSet('cook_technique', cook_technique_entities[0]))
-            dispatcher.utter_message(f"Your cook technique: {cook_technique_entities[0]}")
+            dispatcher.utter_message(f"Cách nấu: {cook_technique_entities[0]}")
         else:
-            dispatcher.utter_message("I understand that you want to provide cook technique ?")
-            dispatcher.utter_message("but I can't any infor ?")
-            dispatcher.utter_message("can you repeat again ?")
+            dispatcher.utter_message("Mình biết là bạn muốn cung cấp cách nấu ăn ?")
+            dispatcher.utter_message("nhưng mình chưa thấy")
+            dispatcher.utter_message("bạn nhập lại dùm mình được không ?")
 
         return slot_set_list

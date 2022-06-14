@@ -37,23 +37,23 @@ class ActionSetIngredient(Action):
         # step Check if contain ingredients or cook technique
 
         if not ingredient_entities and not cook_technique_entities:
-            dispatcher.utter_message("I understand you want to provide searching params ?")
-            dispatcher.utter_message("but I can't any infor")
-            dispatcher.utter_message("can you repeat again ?")
+            dispatcher.utter_message("Mình biết là bạn muốn tìm đồ ăn ?")
+            dispatcher.utter_message("nhưng mình chưa biết bạn cần gì")
+            dispatcher.utter_message("bạn có thể nhập lại cho mình được không  ?")
             return []
 
         if not ingredient_entities:
-            dispatcher.utter_message("Seem like you don't provide any ingredients ?")
+            dispatcher.utter_message("Hình như bạn chưa cung cấp nguyên liệu nào thì phải ?")
             return []
         else:
             slot_set_list.append(SlotSet('ingredient_list', ingredient_entities))
-            dispatcher.utter_message(f"Your current ingredients: {' '.join(iter(ingredient_entities))}")
+            dispatcher.utter_message(f"Danh sách tìm của bạn: {' '.join(iter(ingredient_entities))}")
 
         if not cook_technique_entities:
-            dispatcher.utter_message("Seem like you don't provide any cook technique ?")
+            dispatcher.utter_message("Hình như bạn chưa cung cấp cách nấu thì phải ?")
             slot_set_list.append(SlotSet('cook_technique', ''))
         else:
             slot_set_list.append(SlotSet('cook_technique', cook_technique_entities[0]))
-            dispatcher.utter_message(f"Your cook technique: {cook_technique_entities[0]}")
+            dispatcher.utter_message(f"Cách nấu: {cook_technique_entities[0]}")
 
         return slot_set_list
