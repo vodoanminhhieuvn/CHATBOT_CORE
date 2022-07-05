@@ -17,10 +17,10 @@ class ActionExplainIngredient(Action):
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
         dispatcher.utter_message(
-            'A food ingredient is any substance that is added to a food to achieve a desired effect.')
-        dispatcher.utter_message('The term “food ingredient” includes food additives.')
+            'Nguyên liệu thực phẩm là bất kỳ chất nào được thêm vào thực phẩm để đạt được hiệu quả mong muốn.')
         dispatcher.utter_message(
-            'You can type: cook chicken ---or--- I want to cook fish to provide ingredients')
+            'Các nguyên liệu được lựa chọn theo các đặc điểm dinh dưỡng, chức năng và cảm quan, cũng như xuất xứ và thời vụ')
+        dispatcher.utter_message("Bạn có thể thêm nguyên liệu bằng cách nhập: \"Mình muốn nấu trứng\" ")
 
         return []
 
@@ -56,11 +56,6 @@ class ActionExplainCookTechnique(Action):
         )
 
         dispatcher.utter_message("Đây là một số phương pháp nấu ăn")
-
-        custom_message = list(COOK_TECHNIQUE_DESCRIPTION)
-
-        dispatcher.utter_message(
-            json_message={"cook_techinque": custom_message}
-        )
+        dispatcher.utter_message("Chiên\n Luộc\n Xào")
 
         return []

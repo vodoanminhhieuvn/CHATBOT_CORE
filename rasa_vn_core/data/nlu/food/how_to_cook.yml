@@ -3,7 +3,31 @@ version: '3.1'
 nlu:
   - intent: ask_how_to_cook
     examples: |
-      - cách nấu món số [0](detail_index)
-      - nấu món [1](detail_index)
-      - làm công thức [2](detail_index)
-      - chế biến món [3](detail_index)
+      - chế biến gà chiên
+      - cách làm món cá kho
+      - mình muốn làm món gà kho
+      - mình muốn làm trứng chiên
+      - mình làm gỏi [gà](ingredient) đi
+      - mình muốn làm gà [chiên](cook_technique)
+      - chế biến gà chiên nước mắm
+      - chế biến gỏi [cá](ingredient)
+      - chế biến gà [luộc](cook_technique)
+      - làm trứng chiên
+      - gà chiên 
+      - [cánh gà](ingredient) chiên
+      - trứng chiên
+      - hàu
+      - nước mắm
+      - rim nước mắm
+      - rim sa tế
+      - rim
+      - trứng luộc
+      - mình muốn rim nước mắm
+      - mình muốn _oov_
+      - _oov_
+      - Cà tím sấy giòn
+      - mình muốn làm Bún Gạo Lứt Xào Chay
+      - mình muốn làm Đậu Hủ Kho Tương Hột
+      - mình muốn làm Nước Mắm Chay Từ Trái Thơm
+      - mình muốn làm Bánh Mì Đen
+      - mình muốn làm Sandwich Phô Mai

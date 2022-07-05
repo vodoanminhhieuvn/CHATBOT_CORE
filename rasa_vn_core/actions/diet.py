@@ -5,6 +5,7 @@ from rasa_sdk.events import SlotSet
 from rasa_sdk.executor import CollectingDispatcher
 
 from actions.utils.get_entities import get_entities
+from actions.const.food import PURPOSES
 
 
 class ActionSetDiet(Action):
@@ -18,12 +19,12 @@ class ActionSetDiet(Action):
 
         list_diet = get_entities(tracker=tracker, entity='diet')
 
-        message = "".join(
-            f"{diet} \n"
-            for diet in list_diet
-        )
+        # message = "".join(
+        #     f"{diet} \n"
+        #     for diet in list_diet
+        # )
 
-        dispatcher.utter_message("Your current diet setting:")
-        dispatcher.utter_message(message)
+        dispatcher.utter_message(f"Chế độ ăn hiện tại của bạn: {' '.join(iter(list_diet))}")
+        dispatcher.utter_message("Nhắn \"tìm món ăn\" để tìm các món ăn phù hợp với chế độ ăn của bạn")
 
-        return [SlotSet('diet_list', list_diet)]
+        return [SlotSet('diet', list_diet)]

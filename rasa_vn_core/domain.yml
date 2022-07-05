@@ -1,49 +1,64 @@
 version: '3.1'
 intents:
-  - greet
-  - goodbye
   - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - ask_for_nutrient
-  - ask_for_create_meal_plan
-  - ask_what_is_cook_technique
-  - set_ingredients
-  - ask_what_ingredients
   - ask_find_recipe
+  - ask_for_create_meal_plan
+  - ask_for_nutrient
   - ask_how_to_cook
   - ask_ingredient_details
+  - ask_what_ingredients
+  - ask_what_is_cook_technique
+  - bot_challenge
+  - deny
+  - goodbye
+  - greet
+  - mood_great
+  - mood_unhappy
   - provide_cook_technique
-
+  - set_ingredients
+  - ask_to_clear_search
 actions:
-  - action_set_nutrient
-  - action_find_recipe
   - action_create_meal_plan
-  - action_what_is_cook_technique
-  - action_set_ingredients
-  - action_what_ingredients
-  - action_recipe_detail
+  - action_default_fallback
+  - action_explain_specific_technique
+  - action_find_recipe
   - action_how_to_cook
   - action_ingredient_details
   - action_previous_recipe
-  - action_set_diet
-  - action_explain_specific_technique
+  - action_recipe_detail
   - action_set_cook_technique
-
+  - action_set_diet
+  - action_set_ingredients
+  - action_set_nutrient
+  - action_what_ingredients
+  - action_what_is_cook_technique
+  - action_greet
+  - action_clear_config
 entities:
+  - sentiment
+  - cook_technique
+  - ingredient
   - nutrient
   - min_number
   - max_number
   - target_time
   - target_calories
-  - ingredient
-  - cook_technique
   - detail_index
   - cuisine
-
+  - diet
 slots:
+  asking_recipe:
+    type: bool
+    mappings:
+      - type: custom
+  diet:
+    type: any
+    mappings:
+      - type: custom
+  previous_search:
+    type: any
+    mappings:
+      - type: custom
   meal_plan_response:
     type: any
     mappings:
@@ -105,7 +120,6 @@ forms:
   feedback_form:
     required_slots:
       - feedback
-
 responses:
   utter_greet:
     - text: Hey! How are you?

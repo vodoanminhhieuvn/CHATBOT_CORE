@@ -1,0 +1,13 @@
+version: '3.1'
+
+nlu:
+  - intent: ask_to_clear_search
+    examples: |
+      - xoá lịch sử tìm kiếm
+      - xoá lịch sử
+      - đặt lại lịch sử
+      - khôi phục lịch sử
+      - xoá tìm kiếm
+      - mình muốn tìm món khác
+      - tìm món khác
+      - món khác đi

@@ -117,7 +117,7 @@ LEVELS = {
 }
 
 PURPOSES = {
-    "5": "Giảm cân",
+    "5": ["Giảm cân", "Ăn kiêng"],
     "6": ["Cho phái mạnh"],
     "9": ["Ăn chay"],
     "12": ["Phụ nữ sau khi sinh"],

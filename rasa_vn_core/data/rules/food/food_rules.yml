@@ -50,3 +50,8 @@ rules:
     steps:
       - intent: provide_cook_technique
       - action: action_set_cook_technique
+
+  - rule: clear search
+    steps:
+      - intent: ask_to_clear_search
+      - action: action_clear_config

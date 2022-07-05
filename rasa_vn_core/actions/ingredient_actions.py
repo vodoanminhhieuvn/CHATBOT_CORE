@@ -1,3 +1,4 @@
+from ast import ListComp
 from typing import Text, Dict, Any, List
 
 from rasa_sdk import Action, Tracker
@@ -11,6 +12,14 @@ from actions.utils.get_entities import ExtractorType
 class ActionSetIngredient(Action):
     def name(self) -> Text:
         return "action_set_ingredients"
+
+    def check_contain(self) -> List:
+
+        # Step 1: Check if contain infor in user input match with recipe list
+
+        # Step 2: Return List
+
+        return True
 
     async def run(
             self,
@@ -34,6 +43,8 @@ class ActionSetIngredient(Action):
             extractor=ExtractorType.RegexEntityExtractor
         )
 
+        print(ingredient_entities, cook_technique_entities)
+
         # step Check if contain ingredients or cook technique
 
         if not ingredient_entities and not cook_technique_entities:
@@ -55,5 +66,8 @@ class ActionSetIngredient(Action):
         else:
             slot_set_list.append(SlotSet('cook_technique', cook_technique_entities[0]))
             dispatcher.utter_message(f"Cách nấu: {cook_technique_entities[0]}")
+
+        if ingredient_entities:
+            dispatcher.utter_message("Nhắn \"tìm món ăn\" để tìm các món ăn phù hợp với nguyên liệu của bạn")
 
         return slot_set_list

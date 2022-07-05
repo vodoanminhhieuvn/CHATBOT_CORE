@@ -1,7 +1,0 @@
-{
-  "rules": [{
-    "name": "name",
-    "intent": "intent",
-    "action": "action"
-  }]
-}

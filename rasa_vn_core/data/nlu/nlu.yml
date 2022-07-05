@@ -15,6 +15,9 @@ nlu:
       - vẫy tay
       - chèo bạn
       - buổi chiều tốt lành
+      - chào mình muốn nấu [trứng](ingredient) [chiên](cook_technique)
+      - chào đồ ăn cho người [ăn chay](diet)
+      - xin chào bạn có thể làm được gì
 
   - intent: goodbye
     examples: |

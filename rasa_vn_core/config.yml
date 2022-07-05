@@ -28,7 +28,7 @@ pipeline:
     use_regexes: True
   - name: DIETClassifier
     entity_recognition: true
-    epochs: 300
+    epochs: 700
     ranking_length: 5
   - name: EntitySynonymMapper
   - name: FallbackClassifier

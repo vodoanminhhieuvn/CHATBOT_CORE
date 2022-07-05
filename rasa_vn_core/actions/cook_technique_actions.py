@@ -24,6 +24,18 @@ class ActionSetCookTechnique(Action):
                                                    extractor=ExtractorType.RegexEntityExtractor):
             slot_set_list.append(SlotSet('cook_technique', cook_technique_entities[0]))
             dispatcher.utter_message(f"Cách nấu: {cook_technique_entities[0]}")
+
+            ingredient_list = tracker.get_slot('ingredient_list') or []
+
+            if ingredient_list:
+                dispatcher.utter_message(f"Hiện tại bạn có nguyên liệu: {' '.join(iter(ingredient_list))}")
+                dispatcher.utter_message("Nhắn \"tìm món ăn\" để tìm các món ăn phù hợp với nguyên liệu của bạn")
+            else:
+                dispatcher.utter_message('Hiện tại bạn chưa có nguyên liệu nào')
+                dispatcher.utter_message(
+                    'Bạn hãy cung cấp mình ít nhất 1 nguyên liệu')
+                dispatcher.utter_message("Ví dụ: \"Nguyên liệu trứng\" để thêm nguyên liệu trứng")
+
         else:
             dispatcher.utter_message("Mình biết là bạn muốn cung cấp cách nấu ăn ?")
             dispatcher.utter_message("nhưng mình chưa thấy")
